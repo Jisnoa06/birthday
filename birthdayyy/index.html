@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b16" />
+  <title>Birthday Mission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <main class="page-shell">
+    <section class="hero glass">
+      <p class="eyebrow">A long time ago, on a chessboard far, far away...</p>
+      <h1>Happy Birthday, <span id="friendName">Grandmaster</span></h1>
+      <p class="subtitle">
+        Your final mission is simple: defeat the dark side in one move ⚔.
+      </p>
+      <button class="primary-btn" id="startBtn">Begin the mission.𖥔 ݁ ˖</button>
+    </section>
+
+    <section class="game-section hidden" id="gameSection">
+      <div class="game-card glass">
+        <div class="game-copy">
+          <p class="mission-label">FINAL MISSION</p>
+          <h2>Choose the winning move ˗ˏˋ ★ ˎˊ˗</h2>
+          <p>
+            The Sith king is trapped. Select the square that delivers checkmate.
+          </p>
+          <div class="status" id="status" aria-live="polite">May the Force guide your move.</div>
+        </div>
+
+        <div class="board-wrap">
+          <div class="board" id="board" role="grid" aria-label="Chess puzzle board"></div>
+        </div>
+
+        <div class="choices" id="choices">
+          <button data-move="wrong">Queen to C7</button>
+          <button data-move="win">Queen to H7</button>
+          <button data-move="wrong">Knight to F6</button>
+        </div>
+
+        <div class="hints">
+          <span>♕ The queen sees the final path.</span>
+          <span>✦ Victory is guaranteed.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="surprise hidden" id="surprise">
+      <div class="message-card glass">
+        <div class="lightsaber-line"></div>
+        <p class="mission-label">MISSION COMPLETE</p>
+        <h2>You defeated the dark side.</h2>
+        <p id="birthdayMessage">
+          Happy birthday to one of the coolest people in the galaxy.  
+          May your year be full of legendary wins, brilliant moves, and moments worthy of a saga.
+        </p>
+        <p class="signature">— From your Jisnoa ✦</p>
+        <button class="secondary-btn" id="replayBtn">Play again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
